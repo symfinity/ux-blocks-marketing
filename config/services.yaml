@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  Symfinity\UxBlocksMarketing\:
+    resource: '../src/'
+    exclude:
+      - '../src/SymfinityUxBlocksMarketingBundle.php'
+      - '../src/DependencyInjection/'
+
+  Symfinity\UxBlocksMarketing\Twig\UxBlocksMarketingTwigExtension:
+    tags: ['twig.extension']

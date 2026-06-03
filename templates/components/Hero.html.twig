@@ -1,0 +1,19 @@
+<section
+    data-ui-role="hero"
+    data-ui-fragment="blocks.marketing.hero"
+    {{ attributes }}
+>
+    {% if badge %}<p>{{ badge }}</p>{% endif %}
+    {% if headline %}<h1>{{ headline }}</h1>{% endif %}
+    {% if subheadline %}<p>{{ subheadline }}</p>{% endif %}
+    {% if mediaUrl %}<figure><img src="{{ mediaUrl }}" alt="" /></figure>{% endif %}
+    <div>
+        {% if primaryActionLabel and primaryActionHref %}
+            <twig:Button as="a" href="{{ primaryActionHref }}">{{ primaryActionLabel }}</twig:Button>
+        {% endif %}
+        {% if secondaryActionLabel and secondaryActionHref %}
+            <twig:Button variant="outline" as="a" href="{{ secondaryActionHref }}">{{ secondaryActionLabel }}</twig:Button>
+        {% endif %}
+    </div>
+    {% block content %}{% endblock %}
+</section>

@@ -1,0 +1,13 @@
+<section
+    data-ui-role="faq"
+    data-ui-fragment="blocks.marketing.faq"
+    {{ attributes }}
+>
+    {% for item in items %}
+        <details>
+            <summary>{{ item.question }}</summary>
+            <p>{{ item.answer }}</p>
+        </details>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</section>

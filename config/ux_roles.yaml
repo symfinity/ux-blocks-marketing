@@ -1,0 +1,147 @@
+ux_role_registry: "1.1"
+registry_prefix: blocks.marketing
+roles:
+  - role: hero
+    twig_component: Hero
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\Hero
+    fragment_id: blocks.marketing.hero
+    fragment_pattern: "blocks.marketing.hero.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: feature-section
+    twig_component: FeatureSection
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\FeatureSection
+    fragment_id: blocks.marketing.feature-section
+    fragment_pattern: "blocks.marketing.feature-section.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: cta-band
+    twig_component: CtaBand
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\CtaBand
+    fragment_id: blocks.marketing.cta-band
+    fragment_pattern: "blocks.marketing.cta-band.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: pricing-section
+    twig_component: PricingSection
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\PricingSection
+    fragment_id: blocks.marketing.pricing-section
+    fragment_pattern: "blocks.marketing.pricing-section.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: landing-page
+    twig_component: LandingPage
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\LandingPage
+    fragment_id: blocks.marketing.landing-page
+    fragment_pattern: "blocks.marketing.landing-page.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: testimonials
+    twig_component: Testimonials
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\Testimonials
+    fragment_id: blocks.marketing.testimonials
+    fragment_pattern: "blocks.marketing.testimonials.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: newsletter
+    twig_component: Newsletter
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\Newsletter
+    fragment_id: blocks.marketing.newsletter
+    fragment_pattern: "blocks.marketing.newsletter.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: footer
+    twig_component: Footer
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\Footer
+    fragment_id: blocks.marketing.footer
+    fragment_pattern: "blocks.marketing.footer.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: stats-band
+    twig_component: StatsBand
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\StatsBand
+    fragment_id: blocks.marketing.stats-band
+    fragment_pattern: "blocks.marketing.stats-band.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: logo-cloud
+    twig_component: LogoCloud
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\LogoCloud
+    fragment_id: blocks.marketing.logo-cloud
+    fragment_pattern: "blocks.marketing.logo-cloud.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: faq
+    twig_component: Faq
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\Faq
+    fragment_id: blocks.marketing.faq
+    fragment_pattern: "blocks.marketing.faq.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: team
+    twig_component: Team
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\Team
+    fragment_id: blocks.marketing.team
+    fragment_pattern: "blocks.marketing.team.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: content-section
+    twig_component: ContentSection
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\ContentSection
+    fragment_id: blocks.marketing.content-section
+    fragment_pattern: "blocks.marketing.content-section.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: bento-grid
+    twig_component: BentoGrid
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\BentoGrid
+    fragment_id: blocks.marketing.bento-grid
+    fragment_pattern: "blocks.marketing.bento-grid.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: banner
+    twig_component: Banner
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\Banner
+    fragment_id: blocks.marketing.banner
+    fragment_pattern: "blocks.marketing.banner.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: header-marketing
+    twig_component: HeaderMarketing
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\HeaderMarketing
+    fragment_id: blocks.marketing.header-marketing
+    fragment_pattern: "blocks.marketing.header-marketing.{n}"
+    interaction: nat
+    stage: A
+    status: shipped
+  - role: flyout-menu-marketing
+    twig_component: FlyoutMenuMarketing
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\FlyoutMenuMarketing
+    fragment_id: blocks.marketing.flyout-menu-marketing
+    fragment_pattern: "blocks.marketing.flyout-menu-marketing.{n}"
+    interaction: "nat, stl"
+    stage: A
+    status: shipped
+  - role: error-page-404
+    twig_component: ErrorPage404
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\ErrorPage404
+    fragment_id: blocks.marketing.error-page-404
+    fragment_pattern: "blocks.marketing.error-page-404.{n}"
+    interaction: nat
+    stage: A
+    status: shipped

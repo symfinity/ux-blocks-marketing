@@ -1,0 +1,18 @@
+<section
+    data-ui-role="pricing-section"
+    data-ui-fragment="blocks.marketing.pricing-section"
+    {{ attributes }}
+>
+    {% for tier in tiers %}
+        <twig:Card>
+            <h3>{{ tier.name }}</h3>
+            <p>{{ tier.price }}</p>
+            <ul>
+                {% for feature in tier.features|default([]) %}
+                    <li>{{ feature }}</li>
+                {% endfor %}
+            </ul>
+        </twig:Card>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</section>
