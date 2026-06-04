@@ -1,0 +1,44 @@
+composer_name: symfinity/ux-blocks-marketing
+package_major: "0.x"
+handbook_family: ux-blocks
+
+sidebar:
+  - components
+  - configuration
+  - installation
+  - quickstart
+  - reference
+  - troubleshooting
+  - upgrade
+  - usage
+
+slices:
+  - symfony: "7.4"
+    sources:
+      - components.md
+      - components/banner.md
+      - components/bento-grid.md
+      - components/content-section.md
+      - components/cta-band.md
+      - components/error-page-404.md
+      - components/faq.md
+      - components/feature-section.md
+      - components/flyout-menu-marketing.md
+      - components/footer.md
+      - components/header-marketing.md
+      - components/hero.md
+      - components/landing-page.md
+      - components/logo-cloud.md
+      - components/newsletter.md
+      - components/pricing-section.md
+      - components/stats-band.md
+      - components/team.md
+      - components/testimonials.md
+      - configuration.md
+      - index.md
+      - installation.md
+      - quickstart.md
+      - reference.md
+      - troubleshooting.md
+      - upgrade.md
+      - usage.md
