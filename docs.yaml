@@ -32,6 +32,10 @@ slices:
       - components/newsletter.md
       - components/pricing-section.md
       - components/stats-band.md
+      - components/comparison-section.md
+      - components/integrations-section.md
+      - components/cookie-consent.md
+      - components/status-band.md
       - components/team.md
       - components/testimonials.md
       - configuration.md

@@ -1,0 +1,22 @@
+schema: showcase-examples/1.0
+role: integrations-section
+twig_name: IntegrationsSection
+requires_stimulus: false
+sections:
+  - id: demo
+    title: Example
+    layout: stack
+    items:
+      - variant: default
+        label: Integrations Section
+        props:
+          headline: Integrations
+          items:
+            - title: Stripe
+              description: Accept payments worldwide
+              category: Payments
+              href: https://stripe.com
+            - title: Segment
+              description: Customer data platform
+              category: Analytics
+        render_partial: showcase/_compounds/by_twig.html.twig

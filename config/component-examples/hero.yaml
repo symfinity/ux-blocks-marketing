@@ -11,3 +11,23 @@ sections:
         label: Hero
         props: { headline: 'Ship faster with Chameleon', subheadline: 'Composable Symfony UX blocks across five catalog packages.', badge: 'Showcase', primaryActionLabel: 'Get started', primaryActionHref: '#hero', secondaryActionLabel: 'Browse components', secondaryActionHref: '#hero' }
         render_partial: showcase/_compounds/hero.html.twig
+  - id: motion-matrix
+    title: Motion variants
+    layout: stack
+    items:
+      - variant: none
+        label: motion=none
+        props: { motion: none, headline: 'Static hero baseline', subheadline: '026 parity — no motion attributes.' }
+        render_partial: showcase/_compounds/hero.html.twig
+      - variant: fade-up
+        label: motion=fade-up
+        props: { motion: fade-up, headline: 'Fade up entrance', subheadline: 'CSS keyframes with --ui-motion-duration-normal.' }
+        render_partial: showcase/_compounds/hero.html.twig
+      - variant: blur-in
+        label: motion=blur-in
+        props: { motion: blur-in, headline: 'Blur in entrance', subheadline: 'Filter blur resolves to sharp rest state.' }
+        render_partial: showcase/_compounds/hero.html.twig
+      - variant: gradient-shift
+        label: motion=gradient-shift
+        props: { motion: gradient-shift, headline: 'Gradient shift', subheadline: 'Background gradient animation only.' }
+        render_partial: showcase/_compounds/hero.html.twig

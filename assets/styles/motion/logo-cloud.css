@@ -1,0 +1,45 @@
+@keyframes ux-motion-logos-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes ux-motion-logos-stagger-in {
+    from {
+        opacity: 0;
+        transform: translateX(-0.5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.ux-motion-logos--marquee [data-ui-motion-track] {
+    display: flex;
+    gap: var(--ui-space-lg, 1.5rem);
+    width: max-content;
+    animation-name: ux-motion-logos-marquee;
+    animation-duration: var(--ui-motion-duration-slow);
+    animation-timing-function: var(--ui-motion-easing-linear);
+    animation-iteration-count: infinite;
+}
+
+.ux-motion-logos--marquee:hover [data-ui-motion-track] {
+    animation-play-state: paused;
+}
+
+.ux-motion-logos--stagger-in [data-ui-motion-item] {
+    opacity: 0;
+    animation-name: ux-motion-logos-stagger-in;
+    animation-duration: var(--ui-motion-duration-normal);
+    animation-fill-mode: forwards;
+}
+
+.ux-motion-logos--stagger-in [data-ui-motion-item]:nth-child(1) { animation-delay: 0ms; }
+.ux-motion-logos--stagger-in [data-ui-motion-item]:nth-child(2) { animation-delay: 80ms; }
+.ux-motion-logos--stagger-in [data-ui-motion-item]:nth-child(3) { animation-delay: 160ms; }
+.ux-motion-logos--stagger-in [data-ui-motion-item]:nth-child(4) { animation-delay: 240ms; }

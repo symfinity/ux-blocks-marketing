@@ -1,0 +1,31 @@
+<section
+    data-ui-role="comparison-section"
+    data-ui-fragment="blocks.marketing.comparison-section"
+    {{ attributes }}
+>
+    {% if headline %}<h2>{{ headline }}</h2>{% endif %}
+    {% if subheadline %}<p>{{ subheadline }}</p>{% endif %}
+    {% if columns is defined and rows is defined %}
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    {% for column in columns %}
+                        <th scope="col"{% if column.highlighted|default(false) %} data-ui-highlight="true"{% endif %}>{{ column.label }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        <th scope="row">{{ row.feature }}</th>
+                        {% for cell in row.cells %}
+                            <td{% if cell.emphasized|default(false) %} data-ui-emphasized="true"{% endif %}>{{ cell.value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+    {% block content %}{% endblock %}
+</section>

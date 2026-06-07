@@ -9,5 +9,17 @@ sections:
     items:
       - variant: default
         label: Cta Band
-        props: {}
+        props: { motion: none }
+        render_partial: showcase/_compounds/by_twig.html.twig
+  - id: motion-matrix
+    title: Motion variants
+    layout: stack
+    items:
+      - variant: pulse-glow
+        label: motion=pulse-glow
+        props: { motion: pulse-glow }
+        render_partial: showcase/_compounds/by_twig.html.twig
+      - variant: slide-in
+        label: motion=slide-in
+        props: { motion: slide-in }
         render_partial: showcase/_compounds/by_twig.html.twig

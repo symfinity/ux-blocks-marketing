@@ -39,6 +39,7 @@ final class RegistryConsistencyTest extends TestCase
         $roles = array_column($registry['roles'], 'role');
 
         self::assertSame(MarketingRoleCatalog::roles(), $roles);
+        self::assertCount(22, $roles);
     }
 
     #[Test]

@@ -1,0 +1,31 @@
+@keyframes ux-motion-cta-pulse-glow {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--ui-color-primary, #1f70c1) 35%, transparent);
+    }
+    50% {
+        box-shadow: 0 0 0 0.5rem color-mix(in srgb, var(--ui-color-primary, #1f70c1) 15%, transparent);
+    }
+}
+
+@keyframes ux-motion-cta-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-1.5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.ux-motion-cta--pulse-glow {
+    animation-name: ux-motion-cta-pulse-glow;
+    animation-duration: var(--ui-motion-duration-slow);
+    animation-iteration-count: infinite;
+}
+
+.ux-motion-cta--slide-in {
+    animation-name: ux-motion-cta-slide-in;
+    animation-duration: var(--ui-motion-duration-normal);
+}

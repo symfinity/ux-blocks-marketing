@@ -1,0 +1,11 @@
+{% set mp = this.motionPresentation %}
+{% if mp.isActive %}
+    data-ui-motion="{{ mp.value }}"
+    class="{{ mp.cssClasses|join(' ') }}"
+    {% if mp.stimulusController %}
+        data-controller="{{ mp.stimulusController }}"
+        {% for key, val in mp.stimulusValues %}
+            data-{{ mp.stimulusDataPrefix }}-{{ key }}="{{ val }}"
+        {% endfor %}
+    {% endif %}
+{% endif %}

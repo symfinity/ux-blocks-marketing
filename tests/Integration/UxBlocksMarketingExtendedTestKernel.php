@@ -6,6 +6,7 @@ namespace Symfinity\UxBlocksMarketing\Tests\Integration;
 
 use Symfinity\UxBlocksCore\SymfinityUxBlocksCoreBundle;
 use Symfinity\UxBlocksExtended\SymfinityUxBlocksExtendedBundle;
+use Symfinity\UxBlocksLive\SymfinityUxBlocksLiveBundle;
 use Symfinity\UxBlocksMarketing\SymfinityUxBlocksMarketingBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
@@ -38,6 +39,7 @@ final class UxBlocksMarketingExtendedTestKernel extends Kernel
             new TwigComponentBundle(),
             new SymfinityUxBlocksCoreBundle(),
             new SymfinityUxBlocksExtendedBundle(),
+            new SymfinityUxBlocksLiveBundle(),
             new SymfinityUxBlocksMarketingBundle(),
         ];
     }
@@ -49,6 +51,29 @@ final class UxBlocksMarketingExtendedTestKernel extends Kernel
             'test' => true,
             'router' => ['utf8' => true],
             'php_errors' => ['log' => false],
+            'form' => false,
         ]);
+
+        $container->extension('twig_component', [
+            'defaults' => [
+                'Symfinity\\UxBlocksCore\\' => [
+                    'template_directory' => 'components',
+                    'name_prefix' => '',
+                ],
+                'Symfinity\\UxBlocksExtended\\' => [
+                    'template_directory' => 'components',
+                    'name_prefix' => '',
+                ],
+                'Symfinity\\UxBlocksLive\\' => [
+                    'template_directory' => 'components',
+                    'name_prefix' => '',
+                ],
+            ],
+        ]);
+
+        $container->services()
+            ->set('twig.extension.form', StubFormTwigExtension::class)
+            ->tag('twig.extension')
+            ->public();
     }
 }

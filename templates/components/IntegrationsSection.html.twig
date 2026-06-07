@@ -1,0 +1,25 @@
+<section
+    data-ui-role="integrations-section"
+    data-ui-fragment="blocks.marketing.integrations-section"
+    {{ attributes }}
+>
+    {% if headline %}<h2>{{ headline }}</h2>{% endif %}
+    {% if subheadline %}<p>{{ subheadline }}</p>{% endif %}
+    <div>
+        {% for item in items|default([]) %}
+            <article>
+                {% if item.logoUrl is defined and item.logoUrl %}<img src="{{ item.logoUrl }}" alt="" />{% endif %}
+                {% if item.category is defined and item.category %}<span>{{ item.category }}</span>{% endif %}
+                <h3>
+                    {% if item.href is defined and item.href %}
+                        <a href="{{ item.href }}">{{ item.title }}</a>
+                    {% else %}
+                        {{ item.title }}
+                    {% endif %}
+                </h3>
+                {% if item.description is defined and item.description %}<p>{{ item.description }}</p>{% endif %}
+            </article>
+        {% endfor %}
+    </div>
+    {% block content %}{% endblock %}
+</section>

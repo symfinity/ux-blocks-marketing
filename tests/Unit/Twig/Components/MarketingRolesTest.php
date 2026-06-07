@@ -56,6 +56,23 @@ final class MarketingRolesTest extends ComponentTestCase
             ],
             'Newsletter' => ['headline' => 'Stay in the loop'],
             'ErrorPage404' => [],
+            'ComparisonSection' => [
+                'headline' => 'Compare',
+                'columns' => [['label' => 'A']],
+                'rows' => [
+                    ['feature' => 'Feature', 'cells' => [['value' => 'Yes']]],
+                ],
+            ],
+            'IntegrationsSection' => [
+                'items' => [['title' => 'Partner']],
+            ],
+            'CookieConsent' => [
+                'headline' => 'Cookies',
+                'acceptLabel' => 'Accept',
+            ],
+            'StatusBand' => [
+                'headline' => 'Operational',
+            ],
             default => [],
         };
     }

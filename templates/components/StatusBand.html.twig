@@ -1,0 +1,19 @@
+<section
+    data-ui-role="status-band"
+    data-ui-fragment="blocks.marketing.status-band"
+    data-ui-status-tone="{{ statusTone|default('operational') }}"
+    {{ attributes }}
+>
+    {% if headline %}<p>{{ headline }}</p>{% endif %}
+    {% if uptimeLabel %}<span>{{ uptimeLabel }}</span>{% endif %}
+    {% if lastUpdated %}<span>{{ lastUpdated }}</span>{% endif %}
+    {% if incidentUrl %}<a href="{{ incidentUrl }}">Status page</a>{% endif %}
+    {% if metrics is defined and metrics %}
+        <ul>
+            {% for metric in metrics %}
+                <li><span>{{ metric.label }}</span> <strong>{{ metric.value }}</strong></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% block content %}{% endblock %}
+</section>

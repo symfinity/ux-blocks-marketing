@@ -1,0 +1,30 @@
+schema: showcase-examples/1.0
+role: cookie-consent
+twig_name: CookieConsent
+requires_stimulus: false
+sections:
+  - id: demo
+    title: Example
+    layout: stack
+    items:
+      - variant: default
+        label: Cookie Consent
+        props:
+          headline: We use cookies
+          description: Choose which categories you allow.
+          acceptLabel: Accept all
+          rejectLabel: Reject all
+          customizeLabel: Customize
+          categories:
+            - id: analytics
+              label: Analytics
+              description: Help us improve the product
+            - id: marketing
+              label: Marketing
+              description: Personalized offers
+          policyLinks:
+            - label: Privacy policy
+              href: /privacy
+            - label: Cookie policy
+              href: /cookies
+        render_partial: showcase/_compounds/by_twig.html.twig

@@ -9,5 +9,17 @@ sections:
     items:
       - variant: default
         label: Bento Grid
-        props: {}
+        props: { motion: none }
+        render_partial: showcase/_compounds/by_twig.html.twig
+  - id: motion-matrix
+    title: Motion variants
+    layout: stack
+    items:
+      - variant: hover-lift
+        label: motion=hover-lift
+        props: { motion: hover-lift }
+        render_partial: showcase/_compounds/by_twig.html.twig
+      - variant: stagger-reveal
+        label: motion=stagger-reveal
+        props: { motion: stagger-reveal }
         render_partial: showcase/_compounds/by_twig.html.twig

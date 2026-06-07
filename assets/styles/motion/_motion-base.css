@@ -1,0 +1,38 @@
+:root {
+    --ui-motion-duration-fast: 150ms;
+    --ui-motion-duration-normal: 300ms;
+    --ui-motion-duration-slow: 500ms;
+    --ui-motion-duration-skeleton: 1200ms;
+    --ui-motion-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ui-motion-easing-linear: linear;
+}
+
+[data-ui-motion]:not([data-ui-motion="none"]) {
+    animation-duration: var(--ui-motion-duration-normal);
+    animation-timing-function: var(--ui-motion-easing-standard);
+    animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-ui-motion]:not([data-ui-motion="none"]),
+    .ux-motion-hero--fade-up,
+    .ux-motion-hero--blur-in,
+    .ux-motion-hero--gradient-shift,
+    .ux-motion-stats--count-up,
+    .ux-motion-stats--stagger-fade,
+    .ux-motion-logos--marquee,
+    .ux-motion-logos--stagger-in,
+    .ux-motion-cta--pulse-glow,
+    .ux-motion-cta--slide-in,
+    .ux-motion-bento--hover-lift,
+    .ux-motion-bento--stagger-reveal {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        filter: none !important;
+    }
+
+    .ux-motion-logos--marquee [data-ui-motion-track] {
+        transform: none !important;
+    }
+}

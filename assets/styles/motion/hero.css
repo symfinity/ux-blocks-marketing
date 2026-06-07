@@ -1,0 +1,54 @@
+@keyframes ux-motion-hero-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(1.5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ux-motion-hero-blur-in {
+    from {
+        opacity: 0;
+        filter: blur(8px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes ux-motion-hero-gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.ux-motion-hero--fade-up {
+    animation-name: ux-motion-hero-fade-up;
+    animation-duration: var(--ui-motion-duration-normal);
+}
+
+.ux-motion-hero--blur-in {
+    animation-name: ux-motion-hero-blur-in;
+    animation-duration: var(--ui-motion-duration-slow);
+}
+
+.ux-motion-hero--gradient-shift {
+    background: linear-gradient(
+        120deg,
+        var(--ui-color-surface, #fff) 0%,
+        var(--ui-color-surface-elevated, #f4f4f5) 50%,
+        var(--ui-color-surface, #fff) 100%
+    );
+    background-size: 200% 200%;
+    animation-name: ux-motion-hero-gradient-shift;
+    animation-duration: var(--ui-motion-duration-slow);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

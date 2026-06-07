@@ -145,3 +145,35 @@ roles:
     interaction: nat
     stage: A
     status: shipped
+  - role: comparison-section
+    twig_component: ComparisonSection
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\ComparisonSection
+    fragment_id: blocks.marketing.comparison-section
+    fragment_pattern: "blocks.marketing.comparison-section.{n}"
+    interaction: nat
+    stage: B
+    status: shipped
+  - role: integrations-section
+    twig_component: IntegrationsSection
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\IntegrationsSection
+    fragment_id: blocks.marketing.integrations-section
+    fragment_pattern: "blocks.marketing.integrations-section.{n}"
+    interaction: nat
+    stage: B
+    status: shipped
+  - role: cookie-consent
+    twig_component: CookieConsent
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\CookieConsent
+    fragment_id: blocks.marketing.cookie-consent
+    fragment_pattern: "blocks.marketing.cookie-consent.{n}"
+    interaction: nat
+    stage: B
+    status: shipped
+  - role: status-band
+    twig_component: StatusBand
+    php_class: Symfinity\UxBlocksMarketing\Twig\Components\StatusBand
+    fragment_id: blocks.marketing.status-band
+    fragment_pattern: "blocks.marketing.status-band.{n}"
+    interaction: nat
+    stage: B
+    status: shipped

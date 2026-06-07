@@ -9,5 +9,17 @@ sections:
     items:
       - variant: default
         label: Logo Cloud
-        props: {}
+        props: { motion: none }
+        render_partial: showcase/_compounds/by_twig.html.twig
+  - id: motion-matrix
+    title: Motion variants
+    layout: stack
+    items:
+      - variant: marquee
+        label: motion=marquee
+        props: { motion: marquee }
+        render_partial: showcase/_compounds/by_twig.html.twig
+      - variant: stagger-in
+        label: motion=stagger-in
+        props: { motion: stagger-in }
         render_partial: showcase/_compounds/by_twig.html.twig

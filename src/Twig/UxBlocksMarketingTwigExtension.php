@@ -24,7 +24,8 @@ final class UxBlocksMarketingTwigExtension extends AbstractExtension
 
     public function isExtendedAvailable(): bool
     {
-        $bundleClass = 'Symfinity\\UxBlocksExtended\\SymfinityUxBlocksExtendedBundle';
+        // Post-054: marketing flyouts compose live-tier DropdownMenu (stl), not extended compounds.
+        $bundleClass = 'Symfinity\\UxBlocksLive\\SymfinityUxBlocksLiveBundle';
 
         if (!class_exists($bundleClass)) {
             return false;

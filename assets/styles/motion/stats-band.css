@@ -1,0 +1,37 @@
+@keyframes ux-motion-stats-stagger-fade {
+    from {
+        opacity: 0;
+        transform: translateY(0.75rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ux-motion-stats--stagger-fade [data-ui-motion-item] {
+    opacity: 0;
+    animation-name: ux-motion-stats-stagger-fade;
+    animation-duration: var(--ui-motion-duration-normal);
+    animation-fill-mode: forwards;
+}
+
+.ux-motion-stats--stagger-fade [data-ui-motion-item]:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.ux-motion-stats--stagger-fade [data-ui-motion-item]:nth-child(2) {
+    animation-delay: calc(var(--ui-motion-duration-fast) * 1);
+}
+
+.ux-motion-stats--stagger-fade [data-ui-motion-item]:nth-child(3) {
+    animation-delay: calc(var(--ui-motion-duration-fast) * 2);
+}
+
+.ux-motion-stats--stagger-fade [data-ui-motion-item]:nth-child(4) {
+    animation-delay: calc(var(--ui-motion-duration-fast) * 3);
+}
+
+.ux-motion-stats--count-up [data-marketing-motion-value] {
+    font-variant-numeric: tabular-nums;
+}

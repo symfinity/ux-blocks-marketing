@@ -1,6 +1,7 @@
 <section
     data-ui-role="hero"
     data-ui-fragment="blocks.marketing.hero"
+    {% include '@UxBlocksMarketing/components/_motion_root.html.twig' %}
     {{ attributes }}
 >
     {% if badge %}<p>{{ badge }}</p>{% endif %}

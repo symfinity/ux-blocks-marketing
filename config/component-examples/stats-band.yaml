@@ -1,7 +1,7 @@
 schema: showcase-examples/1.0
 role: stats-band
 twig_name: StatsBand
-requires_stimulus: false
+requires_stimulus: true
 sections:
   - id: demo
     title: Example
@@ -9,5 +9,17 @@ sections:
     items:
       - variant: default
         label: Stats Band
-        props: {}
+        props: { motion: none }
+        render_partial: showcase/_compounds/by_twig.html.twig
+  - id: motion-matrix
+    title: Motion variants
+    layout: stack
+    items:
+      - variant: count-up
+        label: motion=count-up
+        props: { motion: count-up }
+        render_partial: showcase/_compounds/by_twig.html.twig
+      - variant: stagger-fade
+        label: motion=stagger-fade
+        props: { motion: stagger-fade }
         render_partial: showcase/_compounds/by_twig.html.twig
