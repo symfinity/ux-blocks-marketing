@@ -1,0 +1,13 @@
+schema: showcase-examples/1.0
+role: hero
+twig_name: Hero
+requires_stimulus: false
+sections:
+  - id: demo
+    title: Demo
+    layout: stack
+    items:
+      - variant: default
+        label: Hero
+        props: { headline: 'Ship faster with Chameleon', subheadline: 'Composable Symfony UX blocks across five catalog packages.', badge: 'Showcase', primaryActionLabel: 'Get started', primaryActionHref: '#hero', secondaryActionLabel: 'Browse components', secondaryActionHref: '#hero' }
+        render_partial: showcase/_compounds/hero.html.twig

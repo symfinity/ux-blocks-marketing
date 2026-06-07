@@ -1,0 +1,13 @@
+schema: showcase-examples/1.0
+role: newsletter
+twig_name: Newsletter
+requires_stimulus: false
+sections:
+  - id: demo
+    title: Example
+    layout: stack
+    items:
+      - variant: default
+        label: Newsletter
+        props: { headline: 'Stay in the loop', submitLabel: 'Subscribe' }
+        render_partial: showcase/_compounds/by_twig.html.twig
