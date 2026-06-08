@@ -3,16 +3,18 @@
     data-ui-fragment="blocks.marketing.pricing-section"
     {{ attributes }}
 >
-    {% for tier in tiers %}
-        <twig:Card>
-            <h3>{{ tier.name }}</h3>
-            <p>{{ tier.price }}</p>
-            <ul>
-                {% for feature in tier.features|default([]) %}
-                    <li>{{ feature }}</li>
-                {% endfor %}
-            </ul>
-        </twig:Card>
-    {% endfor %}
     {% block content %}{% endblock %}
+    <div data-ui-role="grid" data-ui-columns="3">
+        {% for tier in tiers %}
+            {% if tier.highlighted|default(false) %}
+                <twig:Card data-ui-highlight="true">
+                    {% include '@UxBlocksMarketing/components/_pricing_tier_card.html.twig' with { tier: tier } only %}
+                </twig:Card>
+            {% else %}
+                <twig:Card>
+                    {% include '@UxBlocksMarketing/components/_pricing_tier_card.html.twig' with { tier: tier } only %}
+                </twig:Card>
+            {% endif %}
+        {% endfor %}
+    </div>
 </section>
