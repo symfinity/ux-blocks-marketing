@@ -42,9 +42,9 @@
 .ux-motion-hero--gradient-shift {
     background: linear-gradient(
         120deg,
-        var(--ui-color-surface, #fff) 0%,
-        var(--ui-color-surface-elevated, #f4f4f5) 50%,
-        var(--ui-color-surface, #fff) 100%
+        var(--ui-color-surface) 0%,
+        var(--ui-color-surface-elevated) 50%,
+        var(--ui-color-surface) 100%
     );
     background-size: 200% 200%;
     animation-name: ux-motion-hero-gradient-shift;

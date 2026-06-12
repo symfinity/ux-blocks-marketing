@@ -20,7 +20,7 @@
 
 .ux-motion-logos--marquee [data-ui-motion-track] {
     display: flex;
-    gap: var(--ui-space-lg, 1.5rem);
+    gap: var(--ui-space-lg);
     width: max-content;
     animation-name: ux-motion-logos-marquee;
     animation-duration: var(--ui-motion-duration-slow);

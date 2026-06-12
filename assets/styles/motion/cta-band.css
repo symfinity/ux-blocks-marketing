@@ -1,10 +1,10 @@
 @keyframes ux-motion-cta-pulse-glow {
     0%,
     100% {
-        box-shadow: 0 0 0 0 color-mix(in srgb, var(--ui-color-primary, #1f70c1) 35%, transparent);
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--ui-color-primary) 35%, transparent);
     }
     50% {
-        box-shadow: 0 0 0 0.5rem color-mix(in srgb, var(--ui-color-primary, #1f70c1) 15%, transparent);
+        box-shadow: 0 0 0 0.5rem color-mix(in srgb, var(--ui-color-primary) 15%, transparent);
     }
 }
 

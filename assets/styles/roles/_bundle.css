@@ -1,0 +1,147 @@
+[data-ui-role="hero"],
+[data-ui-role="feature-section"],
+[data-ui-role="cta-band"],
+[data-ui-role="pricing-section"],
+[data-ui-role="landing-page"],
+[data-ui-role="testimonials"],
+[data-ui-role="newsletter"],
+[data-ui-role="footer"],
+[data-ui-role="stats-band"],
+[data-ui-role="logo-cloud"],
+[data-ui-role="faq"],
+[data-ui-role="team"],
+[data-ui-role="content-section"],
+[data-ui-role="bento-grid"],
+[data-ui-role="banner"],
+[data-ui-role="header-marketing"],
+[data-ui-role="flyout-menu-marketing"],
+[data-ui-role="error-page-404"],
+[data-ui-role="comparison-section"],
+[data-ui-role="integrations-section"],
+[data-ui-role="cookie-consent"],
+[data-ui-role="status-band"] {
+  font-family: var(--ui-font-family-sans);
+  color: var(--ui-color-text);
+  box-sizing: border-box;
+}
+[data-ui-role="hero"],
+[data-ui-role="landing-page"] > [data-ui-slot="hero"] {
+  display: grid;
+  gap: var(--ui-space-lg);
+  padding-block: var(--ui-space-xl);
+}
+[data-ui-role="pricing-section"] {
+  display: grid;
+  gap: var(--ui-space-md);
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+[data-ui-role="logo-cloud"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ui-space-md);
+  align-items: center;
+  justify-content: center;
+}
+[data-ui-role="stats-band"] {
+  display: grid;
+  gap: var(--ui-space-md);
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+}
+[data-ui-role="comparison-section"] table {
+  width: 100%;
+  border-collapse: collapse;
+}
+[data-ui-role="comparison-section"] th,
+[data-ui-role="comparison-section"] td {
+  border: 1px solid var(--ui-color-border);
+  padding: var(--ui-space-sm) var(--ui-space-md);
+  text-align: center;
+}
+[data-ui-role="comparison-section"] th[data-ui-highlight="true"] {
+  background: color-mix(in srgb, var(--ui-color-primary) 12%, var(--ui-color-surface-elevated));
+}
+[data-ui-role="integrations-section"] > div {
+  display: grid;
+  gap: var(--ui-space-md);
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+[data-ui-role="integrations-section"] article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-space-sm);
+  padding: var(--ui-space-md);
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+}
+[data-ui-role="cookie-consent"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-space-md);
+  padding: var(--ui-space-lg);
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-color-surface-elevated);
+}
+[data-ui-role="cookie-consent"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-space-sm);
+}
+[data-ui-role="status-band"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ui-space-md);
+  padding: var(--ui-space-md) var(--ui-space-lg);
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+}
+[data-ui-role="status-band"][data-ui-status-tone="operational"] {
+  border-color: var(--ui-color-success);
+}
+[data-ui-role="status-band"][data-ui-status-tone="degraded"] {
+  border-color: var(--ui-color-warning);
+}
+[data-ui-role="status-band"][data-ui-status-tone="outage"] {
+  border-color: var(--ui-color-danger);
+}
+[data-ui-role="status-band"][data-ui-status-tone="maintenance"] {
+  border-color: var(--ui-color-info);
+}
+[data-ui-role="status-band"] ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ui-space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+[data-ui-role="bento-grid"] {
+  display: grid;
+  gap: var(--ui-space-md);
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+[data-ui-role="landing-page"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-space-xl);
+}
+[data-ui-role="flyout-menu-marketing"] ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ui-space-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+[data-ui-role="faq"] details {
+  border-block-end: 1px solid var(--ui-color-border);
+  padding-block: var(--ui-space-sm);
+}
+[data-ui-role="pricing-section"] [data-ui-highlight="true"] {
+  border-color: var(--ui-color-primary);
+  box-shadow: 0 0 0 1px var(--ui-color-primary);
+}
