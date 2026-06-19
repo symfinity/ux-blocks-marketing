@@ -11,7 +11,7 @@ Role `bento-grid` · fragment `blocks.marketing.bento-grid`
 ## Interaction
 
 - `motion="hover-lift"` — `nat` (CSS `:hover`)
-- `motion="stagger-reveal"` — `nat,stl` (optional in-view)
+- `motion="stagger-reveal"` — `nat,stl` (CSS `view()` per cell; mark children `data-ui-motion-item`)
 
 ## Reduced motion
 

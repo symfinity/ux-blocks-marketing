@@ -43,7 +43,7 @@ final class RoleMotionConfig
 
         return match ($role) {
             'stats-band' => $motion === 'count-up',
-            'hero', 'logo-cloud', 'bento-grid' => in_array($motion, ['fade-up', 'blur-in', 'gradient-shift', 'marquee', 'stagger-in', 'stagger-reveal'], true),
+            'logo-cloud' => in_array($motion, ['marquee', 'stagger-in'], true),
             default => false,
         };
     }

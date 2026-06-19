@@ -45,7 +45,7 @@ final class MotionRenderTest extends ComponentTestCase
 
         self::assertStringContainsString(sprintf('data-ui-motion="%s"', $motion), $html);
         self::assertStringContainsString('ux-motion-hero--' . $motion, $html);
-        self::assertStringContainsString('data-controller="symfony--ux-blocks-marketing--marketing-motion"', $html);
+        self::assertStringNotContainsString('data-controller="symfony--ux-blocks-marketing--marketing-motion"', $html);
     }
 
     /** @return array<string, array{0: string}> */
@@ -108,18 +108,20 @@ final class MotionRenderTest extends ComponentTestCase
             'cta pulse' => ['CtaBand', 'pulse-glow', 'ux-motion-cta--'],
             'cta slide' => ['CtaBand', 'slide-in', 'ux-motion-cta--'],
             'bento hover' => ['BentoGrid', 'hover-lift', 'ux-motion-bento--'],
+            'bento stagger' => ['BentoGrid', 'stagger-reveal', 'ux-motion-bento--'],
+            'stats stagger-fade' => ['StatsBand', 'stagger-fade', 'ux-motion-stats--'],
         ];
     }
 
     #[Test]
-    public function bentoStaggerRevealMayAttachOptionalStimulus(): void
+    public function bentoStaggerRevealRendersWithoutStimulus(): void
     {
         self::bootKernel();
         $html = $this->renderComponent('BentoGrid', ['motion' => 'stagger-reveal']);
 
         self::assertStringContainsString('data-ui-motion="stagger-reveal"', $html);
         self::assertStringContainsString('ux-motion-bento--stagger-reveal', $html);
-        self::assertStringContainsString('data-controller="symfony--ux-blocks-marketing--marketing-motion"', $html);
+        self::assertStringNotContainsString('data-controller="symfony--ux-blocks-marketing--marketing-motion"', $html);
     }
 
     #[Test]

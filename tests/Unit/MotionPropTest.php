@@ -57,9 +57,9 @@ final class MotionPropTest extends TestCase
     public static function validHeroMotionProvider(): array
     {
         return [
-            'fade-up' => ['fade-up', true],
-            'blur-in' => ['blur-in', true],
-            'gradient-shift' => ['gradient-shift', true],
+            'fade-up' => ['fade-up', false],
+            'blur-in' => ['blur-in', false],
+            'gradient-shift' => ['gradient-shift', false],
         ];
     }
 
