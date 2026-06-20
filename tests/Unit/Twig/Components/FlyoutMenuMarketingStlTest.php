@@ -30,6 +30,6 @@ final class FlyoutMenuMarketingStlTest extends KernelTestCase
         ]);
 
         self::assertStringContainsString('data-ui-role="flyout-menu-marketing"', $html);
-        self::assertStringContainsString('data-controller="symfony--ux-blocks-live--dropdown-menu"', $html);
+        self::assertStringContainsString('data-controller="symfinity--ux-blocks-interactive--dropdown-menu"', $html);
     }
 }

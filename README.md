@@ -100,6 +100,8 @@ R2 roles (`comparison-section`, `integrations-section`, `cookie-consent`, `statu
 
 ## Install
 
+**Explicit opt-in** — marketing sections are **never** pulled in by `ux-blocks-full`. Add this package only when you ship landing/campaign pages. See [UX Blocks install profiles](https://github.com/symfinity/ux-blocks#install-profiles) for the full profile table.
+
 ```bash
 composer require symfinity/ux-blocks-marketing
 ```

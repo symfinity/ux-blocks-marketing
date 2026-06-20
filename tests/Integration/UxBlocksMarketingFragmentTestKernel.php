@@ -6,8 +6,6 @@ namespace Symfinity\UxBlocksMarketing\Tests\Integration;
 
 use Symfinity\UxBlocksCore\SymfinityUxBlocksCoreBundle;
 use Symfinity\UxBlocksExtended\SymfinityUxBlocksExtendedBundle;
-use Symfinity\UxBlocksInteractive\SymfinityUxBlocksInteractiveBundle;
-use Symfinity\UxBlocksLive\SymfinityUxBlocksLiveBundle;
 use Symfinity\UxBlocksMarketing\SymfinityUxBlocksMarketingBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
@@ -17,7 +15,11 @@ use Symfony\Component\HttpKernel\Kernel;
 use Symfony\UX\StimulusBundle\StimulusBundle;
 use Symfony\UX\TwigComponent\TwigComponentBundle;
 
-final class UxBlocksMarketingExtendedTestKernel extends Kernel
+/**
+ * Stage B opt-in kernel: enables data-ui-fragment emission so composition
+ * tests can assert composed-atom fragment ids (107 fragments default off).
+ */
+final class UxBlocksMarketingFragmentTestKernel extends Kernel
 {
     use MicroKernelTrait;
 
@@ -28,7 +30,7 @@ final class UxBlocksMarketingExtendedTestKernel extends Kernel
 
     public function getCacheDir(): string
     {
-        return $this->getProjectDir() . '/var/cache-extended/' . $this->environment;
+        return $this->getProjectDir() . '/var/cache/fragment-' . $this->environment;
     }
 
     public function registerBundles(): array
@@ -40,8 +42,6 @@ final class UxBlocksMarketingExtendedTestKernel extends Kernel
             new TwigComponentBundle(),
             new SymfinityUxBlocksCoreBundle(),
             new SymfinityUxBlocksExtendedBundle(),
-            new SymfinityUxBlocksInteractiveBundle(),
-            new SymfinityUxBlocksLiveBundle(),
             new SymfinityUxBlocksMarketingBundle(),
         ];
     }
@@ -56,30 +56,8 @@ final class UxBlocksMarketingExtendedTestKernel extends Kernel
             'form' => false,
         ]);
 
-        $container->extension('twig_component', [
-            'defaults' => [
-                'Symfinity\\UxBlocksCore\\' => [
-                    'template_directory' => 'components',
-                    'name_prefix' => '',
-                ],
-                'Symfinity\\UxBlocksExtended\\' => [
-                    'template_directory' => 'components',
-                    'name_prefix' => '',
-                ],
-                'Symfinity\\UxBlocksInteractive\\' => [
-                    'template_directory' => 'components',
-                    'name_prefix' => '',
-                ],
-                'Symfinity\\UxBlocksLive\\' => [
-                    'template_directory' => 'components',
-                    'name_prefix' => '',
-                ],
-            ],
+        $container->extension('symfinity_ux_blocks_core', [
+            'fragment_ids' => true,
         ]);
-
-        $container->services()
-            ->set('twig.extension.form', StubFormTwigExtension::class)
-            ->tag('twig.extension')
-            ->public();
     }
 }
