@@ -12,6 +12,9 @@ services:
   Symfinity\UxBlocksMarketing\Twig\UxBlocksMarketingTwigExtension:
     tags: ['twig.extension']
 
+  Symfinity\UxBlocksMarketing\Twig\BlocksMarketingStylesExtension:
+    tags: ['twig.extension']
+
   Symfinity\UxBlocksMarketing\Css\BlocksMarketingCssProvider:
     arguments:
       $packageDir: '%ux_blocks_marketing.package_dir%'

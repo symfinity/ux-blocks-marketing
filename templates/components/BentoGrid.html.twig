@@ -4,5 +4,13 @@
     {% include '@UxBlocksMarketing/components/_motion_root.html.twig' %}
     {{ attributes }}
 >
+    {% if resolved_icon_watermark %}
+        {% block iconWatermark %}
+            {% include '@UxBlocksCore/components/_shared/p_icon_watermark.html.twig' with {
+                iconWatermark: resolved_icon_watermark,
+                watermarkPosition: resolved_watermark_position,
+            } only %}
+        {% endblock %}
+    {% endif %}
     {% block content %}{% endblock %}
 </section>

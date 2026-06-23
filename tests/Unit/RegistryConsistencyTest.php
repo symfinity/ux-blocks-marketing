@@ -28,7 +28,7 @@ final class RegistryConsistencyTest extends TestCase
     {
         $registry = $this->loadRegistry();
 
-        self::assertSame('1.1', $registry['ux_role_registry']);
+        self::assertSame('1.4', $registry['ux_role_registry']);
         self::assertSame('blocks.marketing', $registry['registry_prefix']);
     }
 

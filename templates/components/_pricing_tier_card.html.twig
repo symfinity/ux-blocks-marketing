@@ -1,13 +1,7 @@
-<twig:Card:Header>
-    <twig:Card:Title>{{ tier.name }}</twig:Card:Title>
-    <twig:Card:Description>
-        <span data-ui-role="typography" data-ui-variant="h2">{{ tier.price }}</span>
-    </twig:Card:Description>
-</twig:Card:Header>
-<twig:Card:Content>
+<twig:Card title="{{ tier.name }}" description="{{ tier.price }}">
     <ul data-ui-role="list">
         {% for feature in tier.features|default([]) %}
             <li data-ui-role="typography" data-ui-variant="p">{{ feature }}</li>
         {% endfor %}
     </ul>
-</twig:Card:Content>
+</twig:Card>

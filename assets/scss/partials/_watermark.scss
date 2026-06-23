@@ -1,0 +1,3 @@
+@use '../_shared/mixins' as mixins;
+
+@include mixins.each-watermark-clip-role;

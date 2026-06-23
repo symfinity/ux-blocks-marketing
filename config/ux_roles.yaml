@@ -1,4 +1,4 @@
-ux_role_registry: "1.1"
+ux_role_registry: "1.4"
 registry_prefix: blocks.marketing
 roles:
   - role: hero

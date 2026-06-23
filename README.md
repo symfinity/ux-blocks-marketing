@@ -62,11 +62,13 @@
 
 ## Interaction profile
 
-**V0 marketing sections** — this package ships **composite section components** for landing and campaign pages. Default stories use **`nat` only**: native HTML structure and Chameleon kernel CSS via `[data-ui-role]`. Sections **compose** atomic children from `symfinity/ux-blocks-core` (buttons, typography, cards, fields) and **may** integrate `symfinity/ux-blocks-extended` for enhanced micro-UX (e.g. flyout dropdown). This package **MUST NOT** require package-owned Stimulus for default section renders. Optional **`stl`** applies only to **`flyout-menu-marketing`** when extended dropdown is installed.
+**V0 marketing sections** — this package ships **composite section components** for landing and campaign pages. Default stories use **`nat` only**: native HTML structure and UI Kernel CSS via `[data-ui-role]`. Sections **compose** atomic children from `symfinity/ux-blocks-core` (buttons, typography, cards, fields) and **may** integrate `symfinity/ux-blocks-extended` for enhanced micro-UX (e.g. flyout dropdown). This package **MUST NOT** require package-owned Stimulus for default section renders. Optional **`stl`** applies only to **`flyout-menu-marketing`** when extended dropdown is installed.
 
 R2 roles (`comparison-section`, `integrations-section`, `cookie-consent`, `status-band`) follow the same **`nat`** composite policy as V0 — no package Stimulus on defaults; motion deferred to future waves.
 
 ## Component inventory
+
+**22** shipped marketing section roles — registry schema **1.4** (`config/ux_roles.yaml`, prefix `blocks.marketing`). Sections compose core atoms and universal region components from `symfinity/ux-blocks-core`; no per-concept `Hero*` / `Footer*` sub-component roles.
 
 | Role | Twig | Category | Interaction | Fragment | Status | REF |
 |------|------|----------|-------------|----------|--------|-----|
@@ -132,3 +134,41 @@ Optional `motion` prop on `hero`, `stats-band`, `logo-cloud` (required v0.5), pl
 | bento-grid | `nat` / `nat,stl` | `none`, `hover-lift`, `stagger-reveal` |
 
 Import motion styles in the host app: `asset('ux-blocks-marketing/styles/motion/index.css')`. Kernel `--ui-motion-*` tokens are consumed when present; package CSS includes documented fallbacks (Option B until kernel utility PR lands).
+
+## Sass author pipeline (120)
+
+Section layout CSS is authored under `assets/scss/` (partials + `_bundle.scss` `@use` graph) and compiled to `assets/styles/roles/_bundle.css` via `bin/blocks-css-compile`. **Motion variants stay parallel:** hand-maintained CSS under `assets/styles/motion/*.css` is **not** part of the Sass tree — import `assets/styles/motion/index.css` separately in the host app (see table above). Do not move motion files into `assets/scss/` without a spec amend.
+
+```bash
+cd src/symfinity
+bin/blocks-css-compile --package=ux-blocks-marketing --check
+bin/ux-blocks-scss-audit --package=ux-blocks-marketing --check
+```
+
+
+<!-- ux-blocks:registry:start -->
+| Role | Twig | Interaction | Fragment | Status |
+|------|------|-------------|----------|--------|
+| hero | Hero | nat | `blocks.marketing.hero` | shipped |
+| feature-section | FeatureSection | nat | `blocks.marketing.feature-section` | shipped |
+| cta-band | CtaBand | nat | `blocks.marketing.cta-band` | shipped |
+| pricing-section | PricingSection | nat | `blocks.marketing.pricing-section` | shipped |
+| landing-page | LandingPage | nat | `blocks.marketing.landing-page` | shipped |
+| testimonials | Testimonials | nat | `blocks.marketing.testimonials` | shipped |
+| newsletter | Newsletter | nat | `blocks.marketing.newsletter` | shipped |
+| footer | Footer | nat | `blocks.marketing.footer` | shipped |
+| stats-band | StatsBand | nat | `blocks.marketing.stats-band` | shipped |
+| logo-cloud | LogoCloud | nat | `blocks.marketing.logo-cloud` | shipped |
+| faq | Faq | nat | `blocks.marketing.faq` | shipped |
+| team | Team | nat | `blocks.marketing.team` | shipped |
+| content-section | ContentSection | nat | `blocks.marketing.content-section` | shipped |
+| bento-grid | BentoGrid | nat | `blocks.marketing.bento-grid` | shipped |
+| banner | Banner | nat | `blocks.marketing.banner` | shipped |
+| header-marketing | HeaderMarketing | nat | `blocks.marketing.header-marketing` | shipped |
+| flyout-menu-marketing | FlyoutMenuMarketing | nat, stl | `blocks.marketing.flyout-menu-marketing` | shipped |
+| error-page-404 | ErrorPage404 | nat | `blocks.marketing.error-page-404` | shipped |
+| comparison-section | ComparisonSection | nat | `blocks.marketing.comparison-section` | shipped |
+| integrations-section | IntegrationsSection | nat | `blocks.marketing.integrations-section` | shipped |
+| cookie-consent | CookieConsent | nat | `blocks.marketing.cookie-consent` | shipped |
+| status-band | StatusBand | nat | `blocks.marketing.status-band` | shipped |
+<!-- ux-blocks:registry:end -->

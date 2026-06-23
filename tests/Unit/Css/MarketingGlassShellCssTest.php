@@ -7,7 +7,7 @@ namespace Symfinity\UxBlocksMarketing\Tests\Unit\Css;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-final class BlocksMarketingCssTest extends TestCase
+final class MarketingGlassShellCssTest extends TestCase
 {
     private static function bundleCss(): string
     {
@@ -18,14 +18,12 @@ final class BlocksMarketingCssTest extends TestCase
     }
 
     #[Test]
-    public function bundleIncludesMarketingR2RoleSelectors(): void
+    public function heroAndContentSectionGlassShellUsesPhysicsHoverLift(): void
     {
         $css = self::bundleCss();
 
-        foreach (['comparison-section', 'status-band', 'hero', 'stats-band'] as $role) {
-            self::assertStringContainsString('[data-ui-role="' . $role . '"]', $css, $role);
-        }
-
-        self::assertStringContainsString('[data-ui-status-tone=operational]', $css);
+        self::assertStringContainsString('[data-ui-role=hero][data-ui-surface=glass]', $css);
+        self::assertStringContainsString('[data-ui-role=content-section][data-ui-surface=glass]', $css);
+        self::assertStringContainsString('translateY(var(--ui-physics-hover-lift))', $css);
     }
 }

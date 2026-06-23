@@ -1,0 +1,20 @@
+/// Glass + physics hooks for marketing section shells (109 / 111 — 121 wave).
+
+[data-ui-role='hero'][data-ui-surface='glass'],
+[data-ui-role='content-section'][data-ui-surface='glass'] {
+  border-radius: var(--ui-radius-lg);
+  border: 1px solid transparent;
+  padding: var(--ui-space-xl);
+  box-shadow: var(--ui-shadow-md);
+  transition:
+    box-shadow var(--ui-motion-duration-normal) var(--ui-motion-easing-standard),
+    transform var(--ui-motion-duration-normal) var(--ui-motion-easing-standard);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  [data-ui-role='hero'][data-ui-surface='glass']:hover,
+  [data-ui-role='content-section'][data-ui-surface='glass']:hover {
+    transform: translateY(var(--ui-physics-hover-lift));
+    box-shadow: var(--ui-shadow-lg);
+  }
+}
