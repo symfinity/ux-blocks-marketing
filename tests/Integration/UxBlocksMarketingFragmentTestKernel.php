@@ -59,5 +59,19 @@ final class UxBlocksMarketingFragmentTestKernel extends Kernel
         $container->extension('symfinity_ux_blocks_core', [
             'fragment_ids' => true,
         ]);
+
+        $container->extension('twig_component', [
+            'anonymous_template_directory' => 'components',
+            'defaults' => [
+                'Symfinity\\UxBlocksCore\\' => [
+                    'template_directory' => 'components',
+                    'name_prefix' => '',
+                ],
+                'Symfinity\\UxBlocksExtended\\' => [
+                    'template_directory' => 'components',
+                    'name_prefix' => '',
+                ],
+            ],
+        ]);
     }
 }

@@ -57,6 +57,7 @@ final class UxBlocksMarketingExtendedTestKernel extends Kernel
         ]);
 
         $container->extension('twig_component', [
+            'anonymous_template_directory' => 'components',
             'defaults' => [
                 'Symfinity\\UxBlocksCore\\' => [
                     'template_directory' => 'components',

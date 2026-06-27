@@ -51,5 +51,19 @@ final class UxBlocksMarketingTestKernel extends Kernel
             'php_errors' => ['log' => false],
             'form' => false,
         ]);
+
+        $container->extension('twig_component', [
+            'anonymous_template_directory' => 'components',
+            'defaults' => [
+                'Symfinity\\UxBlocksCore\\' => [
+                    'template_directory' => 'components',
+                    'name_prefix' => '',
+                ],
+                'Symfinity\\UxBlocksExtended\\' => [
+                    'template_directory' => 'components',
+                    'name_prefix' => '',
+                ],
+            ],
+        ]);
     }
 }
