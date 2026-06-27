@@ -1,8 +1,0 @@
-role: header-marketing
-twig_name: HeaderMarketing
-examples:
-  -
-    id: default
-    title: Default
-    section: Variants
-    props: {  }

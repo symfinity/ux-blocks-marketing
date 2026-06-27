@@ -1,9 +1,0 @@
-role: cta-band
-twig_name: CtaBand
-examples:
-  -
-    id: default
-    title: Default
-    section: Variants
-    props:
-      motion: none

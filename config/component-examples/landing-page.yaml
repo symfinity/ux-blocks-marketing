@@ -1,8 +1,0 @@
-role: landing-page
-twig_name: LandingPage
-examples:
-  -
-    id: default
-    title: Shell
-    section: Variants
-    props: {  }

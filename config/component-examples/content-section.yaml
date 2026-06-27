@@ -1,8 +1,0 @@
-role: content-section
-twig_name: ContentSection
-examples:
-  -
-    id: default
-    title: Default
-    section: Variants
-    props: {  }

@@ -1,8 +1,0 @@
-role: banner
-twig_name: Banner
-examples:
-  -
-    id: default
-    title: Default
-    section: Variants
-    props: {  }
