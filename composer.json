@@ -45,7 +45,7 @@
         "symfony/yaml": "^7.4||^8.0"
     },
     "suggest": {
-        "symfinity/ux-blocks-extended": "Enhanced flyout dropdown (stl) for flyout-menu-marketing"
+        "symfinity/ux-blocks-live": "Enhanced flyout dropdown (stl) for flyout-menu-marketing"
     },
     "autoload": {
         "psr-4": {
