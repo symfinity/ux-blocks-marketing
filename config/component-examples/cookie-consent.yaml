@@ -1,0 +1,10 @@
+role: cookie-consent
+twig_name: CookieConsent
+examples:
+  -
+    id: default
+    title: Default
+    section: Variants
+    props:
+      headline: 'We use cookies'
+      acceptLabel: 'Accept all'

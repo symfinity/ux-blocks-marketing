@@ -1,27 +1,51 @@
 # Stats Band
 
-Role `stats-band` · fragment `blocks.marketing.stats-band`
+Key metrics row with optional scroll-triggered motion.
 
-## Props
+Supports optional **motion** prop (`049`) — disabled when `prefers-reduced-motion: reduce`.
 
-| Prop | Type | Default | Values |
-|------|------|---------|--------|
-| `motion` | string | `none` | `none`, `count-up`, `stagger-fade` |
+Role `stats-band` · fragment `blocks.marketing.stats-band` · interaction `nat`
 
-## Interaction
+## When to use
 
-- `motion="none"` — `nat`
-- `motion="count-up"` — `nat,stl` (Stimulus count-up when in viewport)
-- `motion="stagger-fade"` — `nat` (CSS stagger)
+Use for KPI highlights on landing and status pages.
 
-## Reduced motion
+## Guidelines
 
-Count-up shows final numeric values immediately. Stagger animations are suppressed.
+**Do**
 
-## Example
+- Compose with ui-kernel theme CSS for token-backed spacing and colour.
+- Verify registry markup: `data-ui-role="stats-band"` and `data-ui-fragment="blocks.marketing.stats-band"`.
+
+**Don't**
+
+- Do not animate counting without reduced-motion fallback.
+
+## Usage
 
 ```twig
-<twig:StatsBand motion="count-up">
-    {# Mark stat values with data-marketing-motion-value + Stimulus target in slot content #}
+<twig:StatsBand motion="fade-up">
+    {% block content %}
+        {# Stat cells via composition #}
+    {% endblock %}
 </twig:StatsBand>
 ```
+
+Variant previews render live from `config/component-examples/stats-band.yaml`.
+
+## API Reference
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `motion` | string | none | Scroll/motion variant |
+| `iconWatermark` | string|null | null | Decorative watermark |
+| `watermarkPosition` | string|null | null | Watermark placement |
+
+## Accessibility
+
+Stat values need text labels. Motion respects reduced motion.
+
+## Related
+
+- [Status Band](status-band.md)
+- [Hero](hero.md)

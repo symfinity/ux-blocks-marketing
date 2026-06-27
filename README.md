@@ -2,7 +2,7 @@
 
 # UX Blocks Marketing
 
-### Landing and campaign section components with blocks.marketing fragments
+### Landing and campaign section components
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat&logo=php&logoColor=white)](composer.json)
 [![Symfony](https://img.shields.io/badge/Symfony-7.4+-343434?style=flat&logo=symfony&logoColor=white)](composer.json)

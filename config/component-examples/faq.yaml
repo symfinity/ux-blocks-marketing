@@ -1,0 +1,9 @@
+role: faq
+twig_name: Faq
+examples:
+  -
+    id: default
+    title: Default
+    section: Variants
+    props:
+      items: [{ question: 'What is included?', answer: 'Twenty-two marketing roles.' }]

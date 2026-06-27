@@ -1,0 +1,8 @@
+role: testimonials
+twig_name: Testimonials
+examples:
+  -
+    id: default
+    title: Default
+    section: Variants
+    props: {  }

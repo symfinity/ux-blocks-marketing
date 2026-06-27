@@ -1,0 +1,11 @@
+role: comparison-section
+twig_name: ComparisonSection
+examples:
+  -
+    id: default
+    title: Default
+    section: Variants
+    props:
+      headline: Compare
+      columns: [{ label: Starter }, { label: Pro, highlighted: true }]
+      rows: [{ feature: Sections, cells: [{ value: All }, { value: All }] }]

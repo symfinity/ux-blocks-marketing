@@ -1,0 +1,9 @@
+role: stats-band
+twig_name: StatsBand
+examples:
+  -
+    id: default
+    title: Default
+    section: Variants
+    props:
+      motion: none

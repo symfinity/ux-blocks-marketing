@@ -23,7 +23,7 @@ final class BlocksMarketingCssTest extends TestCase
         $css = self::bundleCss();
 
         foreach (['comparison-section', 'status-band', 'hero', 'stats-band'] as $role) {
-            self::assertStringContainsString('[data-ui-role="' . $role . '"]', $css, $role);
+            self::assertStringContainsString('[data-ui-role=' . $role . ']', $css, $role);
         }
 
         self::assertStringContainsString('[data-ui-status-tone=operational]', $css);

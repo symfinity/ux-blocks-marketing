@@ -1,0 +1,10 @@
+role: integrations-section
+twig_name: IntegrationsSection
+examples:
+  -
+    id: default
+    title: Default
+    section: Variants
+    props:
+      headline: Integrations
+      items: [{ title: Symfony, description: 'First-class bundle' }]

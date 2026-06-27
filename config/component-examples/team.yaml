@@ -1,0 +1,8 @@
+role: team
+twig_name: Team
+examples:
+  -
+    id: default
+    title: Default
+    section: Variants
+    props: {  }

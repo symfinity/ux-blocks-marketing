@@ -1,0 +1,10 @@
+role: status-band
+twig_name: StatusBand
+examples:
+  -
+    id: default
+    title: Operational
+    section: Variants
+    props:
+      headline: 'All systems operational'
+      statusTone: operational

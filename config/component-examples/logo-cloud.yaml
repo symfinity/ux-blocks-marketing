@@ -1,0 +1,9 @@
+role: logo-cloud
+twig_name: LogoCloud
+examples:
+  -
+    id: default
+    title: Default
+    section: Variants
+    props:
+      motion: none

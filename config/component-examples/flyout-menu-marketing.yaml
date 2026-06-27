@@ -1,0 +1,9 @@
+role: flyout-menu-marketing
+twig_name: FlyoutMenuMarketing
+examples:
+  -
+    id: default
+    title: 'Simple nav'
+    section: Variants
+    props:
+      items: [{ label: Product, href: /product }, { label: Docs, href: /docs }]

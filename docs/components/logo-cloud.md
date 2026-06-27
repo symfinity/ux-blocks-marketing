@@ -1,25 +1,49 @@
 # Logo Cloud
 
-Role `logo-cloud` · fragment `blocks.marketing.logo-cloud`
+Partner or customer logo strip with optional motion.
 
-## Props
+Supports optional **motion** prop (`049`) — disabled when `prefers-reduced-motion: reduce`.
 
-| Prop | Type | Default | Values |
-|------|------|---------|--------|
-| `motion` | string | `none` | `none`, `marquee`, `stagger-in` |
+Role `logo-cloud` · fragment `blocks.marketing.logo-cloud` · interaction `nat`
 
-## Interaction
+## When to use
 
-- `motion="none"` — `nat`
-- `motion="marquee"` — `nat` (CSS scroll; pause on hover)
-- `motion="stagger-in"` — `nat,stl` (optional in-view helper)
+Use below hero or testimonials for trust signals.
 
-## Reduced motion
+## Guidelines
 
-Marquee stops; stagger resolves to static logo row.
+**Do**
 
-## Example
+- Compose with ui-kernel theme CSS for token-backed spacing and colour.
+- Verify registry markup: `data-ui-role="logo-cloud"` and `data-ui-fragment="blocks.marketing.logo-cloud"`.
+
+**Don't**
+
+- Do not use low-contrast logos without accessible alt text.
+
+## Usage
 
 ```twig
-<twig:LogoCloud motion="marquee" />
+<twig:LogoCloud motion="fade-up">
+    {% block content %}
+        {# Logo images via composition #}
+    {% endblock %}
+</twig:LogoCloud>
 ```
+
+Variant previews render live from `config/component-examples/logo-cloud.yaml`.
+
+## API Reference
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `motion` | string | none | Entrance motion variant |
+
+## Accessibility
+
+Each logo image requires meaningful `alt` text or `aria-hidden` when decorative.
+
+## Related
+
+- [Integrations Section](integrations-section.md)
+- [Testimonials](testimonials.md)

@@ -1,0 +1,9 @@
+role: newsletter
+twig_name: Newsletter
+examples:
+  -
+    id: default
+    title: Default
+    section: Variants
+    props:
+      headline: 'Stay in the loop'
