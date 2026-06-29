@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-06-29
+
+### Added
+
+- **Glass surface** on `Hero` and `ContentSection` — `data-ui-surface="glass"` via core `ResolvesSurfaceSubstrate`; marketing shell CSS with physics-aware hover lift when ui-kernel glass tokens are present
+- **Icon watermark** on `Hero` — decorative Lucide watermark via core `ResolvesIconWatermark` (`iconWatermark`, `watermarkPosition` props; default position `top-end`)
+- **`ux_blocks_marketing_stylesheet()`** Twig function — renders packaged role CSS for layouts that import marketing styles without an AssetMapper path mapping
+- **ROADMAP.md** — public milestone table for the 0.1.x → 1.0.x release line
+- **SUPPORTERS.md** and Composer **`funding`** metadata for [GitHub Sponsors](https://github.com/sponsors/serotoninja)
+- **`.github/FUNDING.yml`** — GitHub Sponsors link on the split mirror
+
+### Changed
+
+- **Role CSS** — modular SCSS partials for layout sections, FAQ navigation, watermark decoration, and glass marketing shells; refreshed `assets/styles/roles/_bundle.css`
+- **Handbook** — twenty-two per-role component guides with props, examples, and cross-links; expanded [quickstart](docs/quickstart.md), [configuration](docs/configuration.md), [verification](docs/verification.md), and [troubleshooting](docs/troubleshooting.md)
+- **Split mirror CI** — PHP 8.2–8.5 × Symfony 7.4, 8.0, and 8.1 with PHPUnit and PHPStan on every matrix cell; Composer package cache and `GITHUB_TOKEN` authentication for `symfinity/*` dependencies
+
+### Notes
+
+- Pair with `symfinity/ux-blocks-core` `^0.1.3` (or newer patch) for glass surface and icon watermark traits
+- No breaking changes to `blocks.marketing.*` fragment ids or existing Twig props
+- Upgrading from **0.1.0** needs no config or template edits unless you adopt `surface`, `iconWatermark`, or the inline stylesheet helper
+- Hard-refresh Asset Mapper assets in dev after upgrade if glass shells or watermark decoration look stale
+
 ## [0.1.0] - 2026-06-27
 
 ### Added
