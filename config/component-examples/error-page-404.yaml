@@ -1,8 +1,0 @@
-role: error-page-404
-twig_name: ErrorPage404
-examples:
-  -
-    id: default
-    title: Default
-    section: Variants
-    props: {  }

@@ -1,9 +1,0 @@
-role: bento-grid
-twig_name: BentoGrid
-examples:
-  -
-    id: default
-    title: Default
-    section: Variants
-    props:
-      motion: none

@@ -1,8 +1,0 @@
-role: feature-section
-twig_name: FeatureSection
-examples:
-  -
-    id: default
-    title: Default
-    section: Variants
-    props: {  }

@@ -1,9 +1,0 @@
-role: pricing-section
-twig_name: PricingSection
-examples:
-  -
-    id: default
-    title: 'Two tiers'
-    section: Variants
-    props:
-      tiers: [{ name: Starter, price: $9/mo, features: ['All sections'] }, { name: Pro, price: $29/mo, features: ['Priority support'], highlighted: true }]

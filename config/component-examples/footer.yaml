@@ -1,8 +1,0 @@
-role: footer
-twig_name: Footer
-examples:
-  -
-    id: default
-    title: Default
-    section: Variants
-    props: {  }
