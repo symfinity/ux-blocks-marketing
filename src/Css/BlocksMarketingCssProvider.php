@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Symfinity\UxBlocksMarketing\Css;
 
-use Symfinity\UiKernel\Css\CascadeLayerOrder;
-use Symfinity\UiKernel\Css\CascadeLayerWrap;
-
 final class BlocksMarketingCssProvider
 {
     public function __construct(
@@ -26,6 +23,9 @@ final class BlocksMarketingCssProvider
             return '';
         }
 
-        return CascadeLayerWrap::wrap(CascadeLayerOrder::BLOCKS_MARKETING, (string) file_get_contents($bundle));
+        return TierCascadeLayerWrap::wrap(
+            TierCascadeLayerWrap::BLOCKS_MARKETING,
+            (string) file_get_contents($bundle),
+        );
     }
 }
