@@ -1,5 +1,19 @@
 # Upgrade
 
+## 0.1.2
+
+Patch release after [v0.1.1](https://github.com/symfinity/ux-blocks-marketing/releases/tag/v0.1.1). P2 verification profile, grouped handbook examples, marketing tier `@layer` CSS cascade, and split-mirror test bootstrap — no fragment id or prop API changes.
+
+```bash
+composer update symfinity/ux-blocks-marketing symfinity/ux-blocks-core
+```
+
+After upgrade:
+
+1. No config or registry migrations — existing `blocks.marketing.*` fragment ids are unchanged.
+2. Optional: use [styling without ui-kernel](configuration.md#styling-without-ui-kernel) for clean-app smoke instead of requiring ui-kernel.
+3. Clear Symfony cache and hard-refresh Asset Mapper assets in dev if section shells look stale.
+
 ## 0.1.1
 
 Patch release after [v0.1.0](https://github.com/symfinity/ux-blocks-marketing/releases/tag/v0.1.0). Glass surface and icon watermark on marketing heroes, expanded role CSS and handbook, split-mirror CI, and sponsorship metadata — no fragment id changes.

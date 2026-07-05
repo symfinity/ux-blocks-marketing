@@ -1,8 +1,12 @@
 role: error-page-404
 twig_name: ErrorPage404
-examples:
-  -
-    id: default
-    title: Default
+groups:
+  - id: variants
     section: Variants
-    props: {  }
+    layout: stack
+    items:
+      - id: default
+        label: Default
+        props: {}
+        slot_twig: |
+          <twig:ErrorPage404 headline="{{ lorem_title() }}" description="{{ lorem_sentence() }}" />

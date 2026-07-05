@@ -1,3 +1,7 @@
+---
+integration_profile: P2
+---
+
 # Overview
 
 Consumer handbook for **symfinity/ux-blocks-marketing** — twenty-two native-first (`nat`) marketing section roles with `blocks.marketing.*` fragments.
@@ -18,4 +22,6 @@ This tier is **explicit opt-in** — it is not pulled in by `symfinity/ux-blocks
 
 Shop and ecommerce sections ship in **ux-blocks-ecommerce** (release **130**). Live server-state widgets ship in **ux-blocks-live**.
 
-For themed apps, pair with **symfinity/ui-kernel** theme CSS — see [Configuration](configuration.md).
+Consumer gate: profile **P2 embed** (Twig section tags in app templates).
+
+For themed apps, pair with **symfinity/ui-kernel** theme CSS — or use inline tier stylesheets; see [Configuration — styling without ui-kernel](configuration.md#styling-without-ui-kernel).

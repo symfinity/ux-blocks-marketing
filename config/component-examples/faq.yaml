@@ -1,9 +1,12 @@
 role: faq
 twig_name: Faq
-examples:
-  -
-    id: default
-    title: Default
+groups:
+  - id: variants
     section: Variants
-    props:
-      items: [{ question: 'What is included?', answer: 'Twenty-two marketing roles.' }]
+    layout: stack
+    items:
+      - id: default
+        label: Default
+        props: {}
+        slot_twig: |
+          <twig:Faq headline="{{ lorem_title() }}" />

@@ -1,8 +1,12 @@
 role: team
 twig_name: Team
-examples:
-  -
-    id: default
-    title: Default
+groups:
+  - id: variants
     section: Variants
-    props: {  }
+    layout: stack
+    items:
+      - id: default
+        label: Default
+        props: {}
+        slot_twig: |
+          <twig:Team headline="{{ lorem_title() }}" />

@@ -6,26 +6,23 @@ Build a minimal landing section with Hero and CtaBand in a Symfony app with ui-k
 
 [Installation](installation.md) completed — `symfinity/ux-blocks-core` and `symfinity/ux-blocks-marketing`. Add `symfinity/ui-kernel` for themed apps.
 
-## 1. Include ui-kernel CSS
+## 1. Theme CSS (pick one)
 
-Marketing role CSS uses `var(--ui-*)` tokens. In your base layout `<head>`:
+**Recommended — ui-kernel** (full Chameleon tokens):
+
+```bash
+composer require symfinity/ui-kernel
+```
 
 ```twig
 {# templates/base.html.twig #}
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}My app{% endblock %}</title>
     {{ ui_kernel_theme_boot_script() }}
     {{ ui_kernel_css()|raw }}
-    {% block stylesheets %}{% endblock %}
 </head>
-<body>
-    {% block body %}{% endblock %}
-</body>
-</html>
 ```
+
+**Minimal — inline tier CSS:** see [Configuration — styling without ui-kernel](configuration.md#styling-without-ui-kernel).
 
 ## 2. Render marketing sections
 

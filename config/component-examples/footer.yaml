@@ -1,8 +1,12 @@
 role: footer
 twig_name: Footer
-examples:
-  -
-    id: default
-    title: Default
+groups:
+  - id: variants
     section: Variants
-    props: {  }
+    layout: stack
+    items:
+      - id: default
+        label: Default
+        props: {}
+        slot_twig: |
+          <twig:Footer brandName="Symfinity" />

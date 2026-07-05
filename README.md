@@ -85,8 +85,13 @@ See [Installation](docs/installation.md).
 ## Quick Start
 
 ```twig
-<twig:Hero title="Ship faster" subtitle="Composable sections for Symfony apps." />
-<twig:CtaBand title="Get started" href="/signup" />
+<twig:Hero
+    headline="Ship faster"
+    subheadline="Composable sections for Symfony apps."
+    primaryActionLabel="Get started"
+    primaryActionHref="/signup"
+/>
+<twig:CtaBand motion="fade-up" />
 ```
 
 See [Quick start](docs/quickstart.md) for the full walkthrough.

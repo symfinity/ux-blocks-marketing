@@ -1,8 +1,12 @@
 role: testimonials
 twig_name: Testimonials
-examples:
-  -
-    id: default
-    title: Default
+groups:
+  - id: variants
     section: Variants
-    props: {  }
+    layout: stack
+    items:
+      - id: default
+        label: Default
+        props: {}
+        slot_twig: |
+          <twig:Testimonials headline="{{ lorem_title() }}" />

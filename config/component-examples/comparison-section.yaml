@@ -1,11 +1,12 @@
 role: comparison-section
 twig_name: ComparisonSection
-examples:
-  -
-    id: default
-    title: Default
+groups:
+  - id: variants
     section: Variants
-    props:
-      headline: Compare
-      columns: [{ label: Starter }, { label: Pro, highlighted: true }]
-      rows: [{ feature: Sections, cells: [{ value: All }, { value: All }] }]
+    layout: stack
+    items:
+      - id: default
+        label: Default
+        props: {}
+        slot_twig: |
+          <twig:ComparisonSection headline="{{ lorem_title() }}" />

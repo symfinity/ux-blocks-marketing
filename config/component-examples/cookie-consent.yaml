@@ -1,10 +1,12 @@
 role: cookie-consent
 twig_name: CookieConsent
-examples:
-  -
-    id: default
-    title: Default
+groups:
+  - id: variants
     section: Variants
-    props:
-      headline: 'We use cookies'
-      acceptLabel: 'Accept all'
+    layout: stack
+    items:
+      - id: default
+        label: Default
+        props: {}
+        slot_twig: |
+          <twig:CookieConsent headline="{{ lorem_title() }}" description="{{ lorem_sentence() }}" />

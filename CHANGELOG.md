@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-07-05
+
+### Added
+
+- Handbook [verification.md](docs/verification.md) — P2 integration profile and clean-app smoke (`composer require`, marketing registry markup checks)
+- **`integration_profile: P2`** frontmatter on handbook index
+- [Configuration — styling without ui-kernel](docs/configuration.md#styling-without-ui-kernel) — inline core + marketing tier stylesheets when Chameleon theme CSS is not installed
+
+### Changed
+
+- **Grouped component examples** — all twenty-two `config/component-examples/*.yaml` manifests use `groups[]` with `slot_twig` for symfinity-docs handbook SSR
+- **Role CSS cascade** — committed `blocks-marketing.css` and `BlocksMarketingCssProvider::stylesheet()` wrap tier output in `@layer blocks.marketing` for ui-kernel layer ordering
+- **PHPUnit bootstrap** — `tests/bootstrap.php` resolves monorepo or split-mirror Composer autoload; optional `tests/bootstrap.local.php` hook
+- Handbook: quickstart documents optional ui-kernel vs inline tier CSS; verification cross-links the no-kernel styling path
+- README: quickstart uses correct `Hero` and `CtaBand` prop names
+
+### Notes
+
+- No Twig component props or registry role ids changed — OOTB handbook and CSS cascade hygiene after **v0.1.1**
+- Pair with `symfinity/ux-blocks-core` **^0.1.6** (or newer) for automatic inline tier CSS when marketing fragments render
+- Upgrading from **0.1.1** needs no config edits; clear Symfony cache if AssetMapper or Twig cached CSS in dev
+
 ## [0.1.1] - 2026-06-29
 
 ### Added

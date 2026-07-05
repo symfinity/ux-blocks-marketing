@@ -1,9 +1,12 @@
 role: flyout-menu-marketing
 twig_name: FlyoutMenuMarketing
-examples:
-  -
-    id: default
-    title: 'Simple nav'
+groups:
+  - id: variants
     section: Variants
-    props:
-      items: [{ label: Product, href: /product }, { label: Docs, href: /docs }]
+    layout: stack
+    items:
+      - id: default
+        label: "Simple nav"
+        props: {}
+        slot_twig: |
+          <twig:FlyoutMenuMarketing headline="{{ lorem_title() }}" />

@@ -1,9 +1,12 @@
 role: pricing-section
 twig_name: PricingSection
-examples:
-  -
-    id: default
-    title: 'Two tiers'
+groups:
+  - id: variants
     section: Variants
-    props:
-      tiers: [{ name: Starter, price: $9/mo, features: ['All sections'] }, { name: Pro, price: $29/mo, features: ['Priority support'], highlighted: true }]
+    layout: stack
+    items:
+      - id: default
+        label: "Two tiers"
+        props: {}
+        slot_twig: |
+          <twig:PricingSection headline="{{ lorem_title() }}" subheadline="{{ lorem_sentence() }}" />

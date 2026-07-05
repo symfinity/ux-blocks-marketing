@@ -1,10 +1,12 @@
 role: status-band
 twig_name: StatusBand
-examples:
-  -
-    id: default
-    title: Operational
+groups:
+  - id: variants
     section: Variants
-    props:
-      headline: 'All systems operational'
-      statusTone: operational
+    layout: stack
+    items:
+      - id: default
+        label: Operational
+        props: {}
+        slot_twig: |
+          <twig:StatusBand headline="{{ lorem_sentence() }}" statusTone="operational" />

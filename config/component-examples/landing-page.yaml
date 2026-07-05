@@ -1,8 +1,12 @@
 role: landing-page
 twig_name: LandingPage
-examples:
-  -
-    id: default
-    title: Shell
+groups:
+  - id: variants
     section: Variants
-    props: {  }
+    layout: stack
+    items:
+      - id: default
+        label: Shell
+        props: {}
+        slot_twig: |
+          <twig:LandingPage headline="{{ lorem_title() }}" subheadline="{{ lorem_sentence() }}" />

@@ -1,8 +1,12 @@
 role: banner
 twig_name: Banner
-examples:
-  -
-    id: default
-    title: Default
+groups:
+  - id: variants
     section: Variants
-    props: {  }
+    layout: stack
+    items:
+      - id: default
+        label: Default
+        props: {}
+        slot_twig: |
+          <twig:Banner headline="{{ lorem_sentence() }}" />

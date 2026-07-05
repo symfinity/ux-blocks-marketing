@@ -1,5 +1,7 @@
 # Verification
 
+**Integration profile:** P2 — embed (22 marketing section Twig tags).
+
 Checks after installing **symfinity/ux-blocks-marketing** in a Symfony app.
 
 ## Local commands
@@ -25,7 +27,7 @@ On a fresh Symfony 7.4+ project with the symfinity/recipes Flex endpoint:
 composer require symfinity/ux-blocks-core symfinity/ux-blocks-marketing
 ```
 
-Add ui-kernel theme CSS to your layout, then render:
+Add ui-kernel theme CSS to your layout (recommended), **or** inline tier stylesheets — see [Configuration](configuration.md#styling-without-ui-kernel). Then render:
 
 ```twig
 <twig:Hero headline="Welcome" primaryActionLabel="Get started" primaryActionHref="/signup" />

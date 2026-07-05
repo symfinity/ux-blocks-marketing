@@ -1,9 +1,12 @@
 role: newsletter
 twig_name: Newsletter
-examples:
-  -
-    id: default
-    title: Default
+groups:
+  - id: variants
     section: Variants
-    props:
-      headline: 'Stay in the loop'
+    layout: stack
+    items:
+      - id: default
+        label: Default
+        props: {}
+        slot_twig: |
+          <twig:Newsletter headline="{{ lorem_title() }}" description="{{ lorem_sentence() }}" />
