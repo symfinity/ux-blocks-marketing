@@ -1,0 +1,13 @@
+<section
+    data-ui-role="newsletter"
+    data-ui-fragment="blocks.marketing.newsletter"
+    {{ attributes }}
+>
+    {% if headline %}<h2>{{ headline }}</h2>{% endif %}
+    <form method="post" action="#">
+        <label for="newsletter-email">Email</label>
+        <input id="newsletter-email" type="email" name="email" required autocomplete="email" />
+        <twig:Button type="submit">{{ submitLabel }}</twig:Button>
+    </form>
+    {% block content %}{% endblock %}
+</section>

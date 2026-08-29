@@ -1,0 +1,33 @@
+@use 'lists' as *;
+
+@mixin each-marketing-section-shell {
+  @each $role in $ui-marketing-section-roles {
+    [data-ui-role='#{$role}'] {
+      font-family: var(--ui-font-family-sans);
+      color: var(--ui-color-text);
+      box-sizing: border-box;
+    }
+  }
+}
+
+@mixin each-status-band-tone {
+  @each $tone, $token in $ui-status-tones {
+    [data-ui-role='status-band'][data-ui-status-tone='#{$tone}'] {
+      border-color: var(--ui-color-#{$token});
+    }
+  }
+}
+
+@mixin each-watermark-clip-role {
+  @each $role in $ui-watermark-clip-roles {
+    [data-ui-role='#{$role}'] {
+      position: relative;
+      overflow: hidden;
+    }
+
+    [data-ui-role='#{$role}'] > *:not([data-ui-part='icon-watermark']) {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

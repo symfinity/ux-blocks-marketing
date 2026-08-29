@@ -1,0 +1,11 @@
+role: content-section
+twig_name: ContentSection
+groups:
+  - id: variants
+    section: Variants
+    layout: stack
+    items:
+      - id: default
+        props: {}
+        slot_twig: |
+          <twig:ContentSection headline="{{ lorem_title() }}" body="{{ lorem_paragraph() }}" />

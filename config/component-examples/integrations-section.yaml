@@ -1,0 +1,11 @@
+role: integrations-section
+twig_name: IntegrationsSection
+groups:
+  - id: variants
+    section: Variants
+    layout: stack
+    items:
+      - id: default
+        props: {}
+        slot_twig: |
+          <twig:IntegrationsSection headline="{{ lorem_title() }}" />

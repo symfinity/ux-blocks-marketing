@@ -1,0 +1,11 @@
+role: logo-cloud
+twig_name: LogoCloud
+groups:
+  - id: variants
+    section: Variants
+    layout: stack
+    items:
+      - id: default
+        props: {}
+        slot_twig: |
+          <twig:LogoCloud headline="{{ lorem_title() }}" />

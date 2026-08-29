@@ -1,0 +1,40 @@
+<section
+    data-ui-role="cookie-consent"
+    data-ui-fragment="blocks.marketing.cookie-consent"
+    {{ attributes }}
+>
+    {% if headline %}<h2>{{ headline }}</h2>{% endif %}
+    {% if description %}<p>{{ description }}</p>{% endif %}
+    {% if categories is defined and categories %}
+        <ul>
+            {% for category in categories %}
+                <li>
+                    <label>
+                        <input type="checkbox" name="{{ category.id }}"{% if category.defaultEnabled|default(false) %} checked{% endif %} />
+                        {{ category.label }}
+                    </label>
+                    {% if category.description %}<p>{{ category.description }}</p>{% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if policyLinks is defined and policyLinks %}
+        <nav aria-label="Policy links">
+            {% for link in policyLinks %}
+                <a href="{{ link.href }}">{{ link.label }}</a>
+            {% endfor %}
+        </nav>
+    {% endif %}
+    <div>
+        {% if rejectLabel %}
+            <twig:Button variant="outline" type="button">{{ rejectLabel }}</twig:Button>
+        {% endif %}
+        {% if customizeLabel %}
+            <twig:Button variant="outline" type="button">{{ customizeLabel }}</twig:Button>
+        {% endif %}
+        {% if acceptLabel %}
+            <twig:Button type="button">{{ acceptLabel }}</twig:Button>
+        {% endif %}
+    </div>
+    {% block content %}{% endblock %}
+</section>

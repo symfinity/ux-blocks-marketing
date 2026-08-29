@@ -1,0 +1,5 @@
+# Merge in consumer apps with AssetMapper enabled (see README motion section).
+framework:
+    asset_mapper:
+        paths:
+            '%kernel.project_dir%/vendor/symfinity/ux-blocks-marketing/assets': 'ux-blocks-marketing'

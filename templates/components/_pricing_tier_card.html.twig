@@ -1,0 +1,7 @@
+<twig:Card title="{{ tier.name }}" description="{{ tier.price }}">
+    <ul data-ui-role="list">
+        {% for feature in tier.features|default([]) %}
+            <li data-ui-role="typography" data-ui-variant="p">{{ feature }}</li>
+        {% endfor %}
+    </ul>
+</twig:Card>

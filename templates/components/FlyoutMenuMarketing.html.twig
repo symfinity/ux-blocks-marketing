@@ -1,0 +1,25 @@
+{% set use_extended = enhanced and ux_blocks_marketing_extended_available() %}
+<nav
+    data-ui-role="flyout-menu-marketing"
+    data-ui-fragment="blocks.marketing.flyout-menu-marketing"
+    {{ attributes }}
+>
+    {% if use_extended %}
+        <twig:DropdownMenu>
+            <twig:block name="trigger">
+                <twig:Button>Menu</twig:Button>
+            </twig:block>
+            <twig:block name="content">
+                {% for item in items %}
+                    <twig:DropdownMenu:Item>{{ item.label }}</twig:DropdownMenu:Item>
+                {% endfor %}
+            </twig:block>
+        </twig:DropdownMenu>
+    {% else %}
+        <ul>
+            {% for item in items %}
+                <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</nav>

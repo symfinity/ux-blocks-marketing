@@ -1,0 +1,32 @@
+$ui-marketing-section-roles:
+  hero,
+  feature-section,
+  cta-band,
+  pricing-section,
+  landing-page,
+  testimonials,
+  newsletter,
+  footer,
+  stats-band,
+  logo-cloud,
+  faq,
+  team,
+  content-section,
+  bento-grid,
+  banner,
+  header-marketing,
+  flyout-menu-marketing,
+  error-page-404,
+  comparison-section,
+  integrations-section,
+  cookie-consent,
+  status-band !default;
+
+$ui-watermark-clip-roles: hero, cta-band, stats-band, bento-grid !default;
+
+$ui-status-tones: (
+  operational: success,
+  degraded: warning,
+  outage: danger,
+  maintenance: info,
+) !default;

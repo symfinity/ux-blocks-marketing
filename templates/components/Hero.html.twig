@@ -1,0 +1,43 @@
+<section
+    data-ui-role="hero"
+    data-ui-fragment="blocks.marketing.hero"
+    {{ surface_attr|raw }}
+    {% include '@UxBlocksMarketing/components/_motion_root.html.twig' %}
+    {{ attributes }}
+>
+    {% if resolved_icon_watermark %}
+        {% block iconWatermark %}
+            {% include '@UxBlocksCore/components/_shared/p_icon_watermark.html.twig' with {
+                iconWatermark: resolved_icon_watermark,
+                watermarkPosition: resolved_watermark_position,
+            } only %}
+        {% endblock %}
+    {% endif %}
+    <div data-ui-role="stack" data-ui-gap="md">
+        {% if badge %}
+            <p data-ui-role="typography" data-ui-variant="small">{{ badge }}</p>
+        {% endif %}
+        {% if headline %}
+            <h1 data-ui-role="typography" data-ui-variant="h1">{{ headline }}</h1>
+        {% endif %}
+        {% if subheadline %}
+            <p data-ui-role="typography" data-ui-variant="p">{{ subheadline }}</p>
+        {% endif %}
+        {% if mediaUrl %}
+            <figure data-ui-slot="media">
+                <img src="{{ mediaUrl }}" alt="" />
+            </figure>
+        {% endif %}
+        {% if (primaryActionLabel and primaryActionHref) or (secondaryActionLabel and secondaryActionHref) %}
+            <div data-ui-role="stack" data-ui-direction="horizontal" data-ui-gap="md">
+                {% if primaryActionLabel and primaryActionHref %}
+                    <twig:Button as="a" href="{{ primaryActionHref }}">{{ primaryActionLabel }}</twig:Button>
+                {% endif %}
+                {% if secondaryActionLabel and secondaryActionHref %}
+                    <twig:Button variant="outline" as="a" href="{{ secondaryActionHref }}">{{ secondaryActionLabel }}</twig:Button>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+    {% block content %}{% endblock %}
+</section>
