@@ -22,8 +22,8 @@ final class MarketingGlassShellCssTest extends TestCase
     {
         $css = self::bundleCss();
 
-        self::assertStringContainsString('[data-ui-role=hero][data-ui-surface=glass]', $css);
-        self::assertStringContainsString('[data-ui-role=content-section][data-ui-surface=glass]', $css);
+        self::assertStringContainsString('[data-ui-role="hero"][data-ui-surface="glass"]', $css);
+        self::assertStringContainsString('[data-ui-role="content-section"][data-ui-surface="glass"]', $css);
         self::assertStringContainsString('translateY(var(--ui-physics-hover-lift))', $css);
     }
 }
