@@ -1,5 +1,13 @@
 # Upgrade
 
+## 0.1.4
+
+The package Sass build keeps quoted attribute selectors. Shipped role CSS is unchanged from 0.1.3. `data-ui-status-tone` stays unquoted. No config or template changes.
+
+```bash
+composer update symfinity/ux-blocks-marketing
+```
+
 ## 0.1.3
 
 Role stylesheets quote `data-ui-role` and `data-ui-surface`. `data-ui-status-tone` stays unquoted. The selectors match the same elements. No config or template changes.
