@@ -1,5 +1,13 @@
 # Upgrade
 
+## 0.1.3
+
+Role stylesheets quote `data-ui-role` and `data-ui-surface`. `data-ui-status-tone` stays unquoted. The selectors match the same elements. No config or template changes.
+
+```bash
+composer update symfinity/ux-blocks-marketing
+```
+
 ## 0.1.2
 
 Patch release after [v0.1.1](https://github.com/symfinity/ux-blocks-marketing/releases/tag/v0.1.1). P2 verification profile, grouped handbook examples, marketing tier `@layer` CSS cascade, and split-mirror test bootstrap — no fragment id or prop API changes.
